@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: What is meant for you will come to you - Imam Ali (a.s).
+subtitle: What is meant for you will come to you.
 
 profile:
   align: right
