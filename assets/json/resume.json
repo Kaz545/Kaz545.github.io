@@ -62,34 +62,99 @@
 
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
+      "name": "Introduction to Python for Data Science",
+      "date": "2019-01-01",
+      "issuer": "Microsoft",
+      "url": "https://courses.edx.org/certificates/bb01c28614f342cb9a1fd7a59fec338c",
+      "icon": "fa-solid fa-location-dot"
+    }, 
+    {
+      "name": "Introduction to Data Science",
+      "date": "2018-03-01",
+      "issuer": "Microsoft",
+      "url": "https://courses.edx.org/certificates/b62ace0e726c4a40bdaca1b914bd8e45",
+      "icon": "fa-solid fa-location-dot"
+    }, 
+    {
+      "name": "Querying Data with Transact-SQL",
+      "date": "2018-03-01",
+      "issuer": "Microsoft",
+      "url": "https://courses.edx.org/certificates/d6f407d8e08848c8b97156148cd6bd4c",
+      "icon": "fa-solid fa-location-dot"
+    }, 
+    {
+      "name": "Analyzing and Visualizing Data with Excel",
+      "date": "2017-09-01",
+      "issuer": "Microsoft",
+      "url": "https://courses.edx.org/certificates/4fec3595f1de4c4a946a5e5b0b4599a7",
+      "icon": "fa-solid fa-location-dot"
+    }, 
+    {
+      "name": "Introduction to Data Analysis Using Excel",
+      "date": "2017-07-01",
+      "issuer": "Microsoft",
+      "url": "https://courses.edx.org/certificates/288f44551aa84c379a833d9a4204e5b1",
       "icon": "fa-solid fa-location-dot"
     }
   ],
   "skills": [
     {
-      "name": "Machine Learning",
-      "level": "Master",
+      "name": "Programming Languages",
+      "level": "",
       "icon": "",
       "keywords": [
-        "Numpy", "TensorFlow"
+        "Python", "R", "JavaScript (D3)", "C++", "Scala", "Stata"
         
       ]
-    }
-  ],
-  "languages": [
+    }, 
     {
-      "language": "Urdu",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
+      "name": "Databases",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "MySQL", "PostgreSQL"
+        
+      ]
+    }, 
     {
-      "language": "English",
-      "fluency": "Native speaker",
-      "icon": ""
+      "name": "Web Development & Visualization",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "Rshiny", "Flask", "D3", "Tableau", "DataBricks"
+        
+      ]
+    }, 
+    {
+      "name": "Big Data & Distributed Computing",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "PySpark", "Hadoop"
+        
+      ]
+    }, 
+    {
+      "name": "Data Analysis & Machine Learning",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "Stan", "caret", "data.table", "dplyr", 
+        "pandas", "matplotlib", "bokeh", "scikit-learn", "numpy", "scipy", 
+        "plotly", "ggplot", "rpart", "networkX", "gensim", "NLP", "OpenCV", 
+        "Shap", "PyTorch", "Tensorflow", 
+        "Microsoft Machine Learning Studio", "Apache Superset"
+        
+      ]
+    }, 
+    {
+      "name": "Cloud Services",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "GCP", "AWS", "Azure ML"
+        
+      ]
     }
   ],
   "projects": [
@@ -98,7 +163,7 @@
       "summary": "Conducted an in-depth analysis of a vast hotel reviews dataset comprising 505k observations. Employed the BERTopic natural language processing framework to discern and highlight the primary topics within the reviews. Additionally, developed an interactive Tableau dashboard, enabling the visualization of main topics over time for individual hotels, facilitating proactive decision-making.",
       "highlights": ["NLP", "Data Visualization"],
       "startDate": "",
-      "endDate": "",
+      "endDate": "2023-04",
       "url": ""
     }, 
     {
@@ -106,7 +171,7 @@
       "summary": "Developed a robust methodology for detecting toxic comments using the Wikipedia Detox dataset. Conducted comprehensive data preprocessing and employed word2vec to generate word embeddings, serving as feature inputs for various machine learning models such as Logistic Regression, KNN, Naive Bayes, Random Forest, and AdaBoost. Identified the model with superior performance across multiple key metrics.",
       "highlights": ["ML", "Word2Vec"],
       "startDate": "",
-      "endDate": "",
+      "endDate": "2022-12",
       "url": ""
     }, 
     {
@@ -114,7 +179,7 @@
       "summary": "Designed a dialogue-driven tool for brain tumor MRI analysis, utilizing CLIP and a custom lightweight model for precise patch-level tumor localization. Integrated results with Llama-3.2-11b vision model and engineered prompts, allowing intuitive and interactive MRI interpretation.",
       "highlights": ["LLM", "CV"],
       "startDate": "",
-      "endDate": "",
+      "endDate": "2024-12",
       "url": ""
     }, 
     {
@@ -122,7 +187,7 @@
       "summary": "Leveraged the Amazon Fine Foods review dataset to create a sophisticated recommendation system. Transformed textual data into an embedding space, extracting nuanced semantic meanings through the distilroBERTa model. These embeddings were then utilized as inputs for a Neural Collaborative Filtering (NCF) model, enhancing the accuracy and relevance of the recommendations provided.",
       "highlights": ["RS", "NLP"],
       "startDate": "",
-      "endDate": "",
+      "endDate": "2023-12",
       "url": ""
     }, 
     {
@@ -130,7 +195,7 @@
       "summary": "Implemented cutting-edge methodology for clinical time series data using masked self-attention, positional encoding, and dense interpolation, outperforming LSTM and logistic regression models with up to 5% improvement in prediction accuracy on MIMIC-III datasets.",
       "highlights": ["Healthcare", "Transformers"],
       "startDate": "",
-      "endDate": "",
+      "endDate": "2024-04",
       "url": ""
     }
   ]
