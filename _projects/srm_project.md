@@ -12,7 +12,7 @@ In the realm of e-commerce, the ability to provide personalized recommendations 
 
 **Data**
 
-Data used for this project has been taken from Kaggle from <a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/"> here </a>
+Data used for this project has been taken from Kaggle from <a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/"> here. </a>
 
 **Methodology**
 
