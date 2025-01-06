@@ -41,7 +41,7 @@
       "studyType": "MSc",
       "startDate": "2022-01-01",
       "endDate": "2024-12-01",
-      "score": "3.90",
+      "score": "3.91",
       "courses": ["Deep Learning", "Big Data for Healthcare", "Data and Visual Analytics", 
       "Computation Data Analytics - ML I", "High Dimensional Data Analytics - ML II", "Deterministic Optimization", 
       "Data Analytics for Business"]
@@ -138,12 +138,9 @@
       "name": "Data Analysis & Machine Learning",
       "level": "",
       "icon": "",
-      "keywords": [
-        "Stan", "caret", "data.table", "dplyr", 
-        "pandas", "matplotlib", "bokeh", "scikit-learn", "numpy", "scipy", 
-        "plotly", "ggplot", "rpart", "networkX", "gensim", "NLP", "OpenCV", 
-        "Shap", "PyTorch", "Tensorflow", 
-        "Microsoft Machine Learning Studio", "Apache Superset"
+      "keywords": [ 
+        "pandas", "scikit-learn", "scipy", 
+        "plotly", "OpenCV", "PyTorch", "Apache Superset"
         
       ]
     }, 
