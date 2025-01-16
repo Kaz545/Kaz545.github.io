@@ -7,15 +7,13 @@ importance: 1
 category: work
 related_publications: false
 ---
-**NOTE :** Colloborated with <a href="https://www.linkedin.com/in/gshilpa3/"> Shilpa G </a> on this project. 
+**NOTE :** Collaborated with <a href="https://www.linkedin.com/in/gshilpa3/"> Shilpa G </a> on this project. 
 
 In the realm of e-commerce, the ability to provide personalized recommendations based on user reviews is a key to enhancing user experience. This project aims to develop a semantic-driven recommendation system by performing topic modeling on Amazon Fine Food Reviews. The traditional recommendation systems often overlook the rich semantic information available in user reviews. This project aims to leverage this information to not only provide more personalized recommendations but also understand why certain recommendations are made. The project combines Natural Language Processing (NLP) and recommendation systems, two significant areas in machine learning, to solve a real-world problem.
 
 ### Data
 
-We used amazon fine food reviews data-set available on Kaggle <a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/"> here. </a> It had total of 568,454 reviews from around
-256,059 users on 74,258 products. It included unique iden-
-tifier for users, products and ratings and plain text review.
+We used amazon fine food reviews data-set available on Kaggle <a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/"> here. </a> It had total of 568,454 reviews from around 256,059 users on 74,258 products. It included unique identifier for users, products and ratings and plain text review.
 
 ### Methodology 
 
@@ -24,13 +22,12 @@ tifier for users, products and ratings and plain text review.
 Since our approach included using the textual data to extract semantic features that would be essentially inputs to our deep learning framework for recommendations. There were multiple data pre-processing steps that are as follows:
  - We cleaned our reviews data by removing all non alphabetic characters and stop words as they would not add any value to the semantic representation of the review.
  - Since we were doing topic modeling hence we made sure that sentences with just one words are nouns this ensured more meaningful topics.
- - We performed stemming for text normalization and reduced all the words to their root as this would help us consolidate the words with same base and enhance the topic modeling.
-After cleaning our text data we analyzed the it using word cloud to understand it better and to ensure that we have the data in the format we want it to be.
+ - We performed stemming for text normalization and reduced all the words to their root as this would help us consolidate the words with same base and enhance the topic modeling.  
 
 #### Topic Modelling 
 
-As with most recommendation models the first step usually includes matrix factorization to create two low rank matrices, one for users and one for product from user - product interaction matrix. We had around 256,059 users and 74,258 products and their interaction matrix was of size $$ 1.9 \times 10^{10} $$ . it was very difficult for us to work with this matrix due to its size, it was computationally intensive. We utilized topic modeling to cluster our users and products so that we can reduce the size of this interaction matrix and efficiently work with it.
-Since we were clustering users and products we firstly created a history of users and products and find the all the reviews against each. We did this so that we can correctly identify a user and a product in semantic space based on all the interactions that included them.
+As with most recommendation models the first step usually includes matrix factorization to create two low rank matrices, one for the users and one for the products from user - product interaction matrix. We had around 256,059 users and 74,258 products and their interaction matrix was of size $$ 1.9 \times 10^{10} $$. Working with matrix of this size was computationally intensive. To that end we utilized topic modeling to cluster our users and products so that we can reduce the size of this interaction matrix and efficiently work with it.
+Since we were clustering users and products we firstly created a history of users and products and find the all the reviews against them. We did this so that we can correctly identify a user and a product in semantic space based on all the interactions that included them.
 Using this history we performed topic modeling to cluster the user and products. Steps included to convert the textual data into an embedding space, then performing dimensionality reduction and clustering and lastly fine tuning and evaluating the topics extract. Below schematic summarises the methodology:
 
 <div class="row">
@@ -44,13 +41,12 @@ Using this history we performed topic modeling to cluster the user and products.
 
 #### Topic Extraction 
 
-After extracting the topics we need some representation of them we can do this using count vectorizer that would essentially find the count of every token in a cluster and then using this bag of words representation we used class topics based TF-IDF to find the important terms in a particular
-topic. We generalize TF-IDF procedure to clusters of documents. First, we treat all documents in a cluster as a single document by simply concatenating the documents. Then, TF-IDF is adjusted to account for this representation by translating documents to clusters:
+After extracting the topics we need some representation of them we can do this using count vectorizer that would essentially find the count of every token in a cluster and then using this bag of words representation we used class based TF-IDF to find the important terms in a particular topic. 
+We generalize TF-IDF procedure to clusters of documents. First, we treat all documents in a cluster as a single document by simply concatenating the documents. Then, TF-IDF is adjusted to account for this representation by translating documents to clusters:
 
 $$  W_{t,c} = t_{f,c}.\log(1 + \frac{A}{tf_{t}}) $$
 
-Where the term frequency models the frequency of term $$t$$ in a class $$c$$ or in this instance. Here, the class $$c$$ is the collection of documents concatenated into a single document for each cluster. Then, the inverse document frequency is replaced by the inverse class frequency to measure how much information a term provides to a class. It is calculated by taking the logarithm of the average number of words per class $$A$$ divided by the frequency of term $$t$$ across all classes. To output only positive values, we add one to the division within the logarithm.
-We can find the main topics for each user and product in below schematics. 
+Where the term frequency models the frequency of term $$t$$ in a class $$c$$ or in this instance. Here, the class $$c$$ is the collection of documents concatenated into a single document for each cluster. Then, the inverse document frequency is replaced by the inverse class frequency to measure how much information a term provides to a class. It is calculated by taking the logarithm of the average number of words per class $$A$$ divided by the frequency of term $$t$$ across all classes. To output only positive values, we add one to the division within the logarithm. Following this we can find the main topics for each user and product in schematics below. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -90,12 +86,11 @@ We can find the NCF model architecture below:
 
 ### Experiments
 
-Before evaluating and presenting results for our NCF model we evaluated our topic model using the framework called OCTIS. In addition to visually
-inspecting the topics we also used diversity metric to evaluate the topics separately for users and for products. The diversity score is the metric that measures how diverse the **topk** words of a topic are to each other. We chose $$k=10$$ and diversity score for users topics was **0.99** while for products it was **0.97** both suggests that both models were good while users model being slightly better. Once we were confident with our topic models we went on with NCF model. 
+Before evaluating and presenting results for our NCF model we evaluated our topic model using the framework called OCTIS. In addition to visually inspecting the topics we also used diversity metric to evaluate the topics separately for users and products. The diversity score is the metric that measures how diverse the **topk** words of a topic are to each other. We chose $$k=10$$ and diversity score for users topics was **0.99** while for products it was **0.97** both suggests that both models were good while users model being slightly better. Once we were confident with our topic models we went on with the NCF model. 
 
 Moreover, in the course of our experiments, we trained the Neural Collaborative Filtering model under varying degrees of complexity. The most complex variant of the model incorporated four dense layers, weight decay, and dropout regularization succeeding each layer. On the other hand, the least complex model was composed of merely two dense layers and did not include any form of regularization.
 
-Interestingly, a model of intermediate complexity as shown above, comprising three dense layers, yielded the most promising results. The optimal hyperparameters for this model were determined to be a learning rate of **0.001**, a batch size of **1024**, and a total of **5** training epochs.
+The optimal hyperparameters for this model were determined to be a learning rate of **0.001**, a batch size of **1024**, and a total of **5** training epochs.
 
 The performance of this model was evaluated based on the training,validation, and test losses. The model achieved a training loss of **1.2275e-06**, indicative of its ability to learn effectively from the training data. The validation loss was recorded as **2.1576e-08**, suggesting that the model was able to generalize well to unseen data. Finally, the model demonstrated a test loss of **2.1152935e-08**, further attesting to its robust predictive performance on entirely new data. 
 
