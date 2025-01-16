@@ -13,13 +13,13 @@ In the realm of e-commerce, the ability to provide personalized recommendations 
 
 ### Data
 
-We used amazon fine food reviews data-set available on Kaggle <a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/"> here. </a>. It had total of 568,454 reviews from around
+We used amazon fine food reviews data-set available on Kaggle <a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/"> here. </a> It had total of 568,454 reviews from around
 256,059 users on 74,258 products. It included unique iden-
 tifier for users, products and ratings and plain text review.
 
 ### Methodology 
 
-### Data Preprocessing
+#### Data Preprocessing
 
 Since our approach included using the textual data to extract semantic features that would be essentially inputs to our deep learning framework for recommendations. There were multiple data pre-processing steps that are as follows:
  - We cleaned our reviews data by removing all non alphabetic characters and stop words as they would not add any value to the semantic representation of the review.
@@ -44,7 +44,7 @@ Using this history we performed topic modeling to cluster the user and products.
 
 #### Topic Extraction 
 
-After extracting the topics we need some representation of them we can do this using count vectorizer that would essentially find the count of every token in a cluster and then using this bag of words representation we used class/topic based TF-IDF to find the important terms in a particular
+After extracting the topics we need some representation of them we can do this using count vectorizer that would essentially find the count of every token in a cluster and then using this bag of words representation we used class topics based TF-IDF to find the important terms in a particular
 topic. We generalize TF-IDF procedure to clusters of documents. First, we treat all documents in a cluster as a single document by simply concatenating the documents. Then, TF-IDF is adjusted to account for this representation by translating documents to clusters:
 
 $$  W_{t,c} = t_{f,c}.\log(1 + \frac{A}{tf_{t}}) $$
@@ -61,7 +61,7 @@ We can find the main topics for each user and product in below schematics.
     </div>
 </div>
 <div class="caption">
-    Left Image showcase main themes/topics for porducts while the one on the right does it for the users.
+    Left Image showcase main themes/topics for products while the one on the right does it for the users.
 </div>
 
 #### Neural Collaborative Filtering
@@ -110,7 +110,7 @@ In our analysis, we observed that users who posted reviews about soups were clus
     </div>
 </div>
 <div class="caption">
-    Left image shows users who ordered soup and on the left are the products that our model recommended for them.
+    Left image shows users who ordered soup and on the right are the products that our model recommended for them.
 </div>
 
 ### Conclusion 
