@@ -7,6 +7,7 @@ importance: 1
 category: work
 related_publications: false
 ---
+**NOTE :** Colloborated with <a href="https://www.linkedin.com/in/gshilpa3/"> Shilpa G </a> on this project. 
 
 In the realm of e-commerce, the ability to provide personalized recommendations based on user reviews is a key to enhancing user experience. This project aims to develop a semantic-driven recommendation system by performing topic modeling on Amazon Fine Food Reviews. The traditional recommendation systems often overlook the rich semantic information available in user reviews. This project aims to leverage this information to not only provide more personalized recommendations but also understand why certain recommendations are made. The project combines Natural Language Processing (NLP) and recommendation systems, two significant areas in machine learning, to solve a real-world problem.
 
