@@ -37,7 +37,7 @@ In this study, we leverage the CLIP framework with the ViT-B/14 (Vision Transfor
 While image data for the visual encoder was readily available, corresponding textual data for the text encoder was absent. To address this, we systematically generated 20 text prompts for each category (normal and abnormal images). These prompts, identical across all images in their respective categories, provided descriptive textual input to
 the CLIP textual encoder.
 
-Moreover we utilize the prompt ensemble technique where we averaged the the text features extracted by the text encoder as the final text features for both normal and abnormal texts $$ Ft ∈ R2×C $$, where $$ C $$ denotes the number of channels of the feature. Let $$ Fc ∈ R1×C $$ represent the image features derived from the visual encoder for classification. The relative probabilities $$ s $$ of the MRI being classified as either normal or abnormal can then be expressed as:
+Moreover we utilize the prompt ensemble technique where we averaged the the text features extracted by the text encoder as the final text features for both normal and abnormal texts $$ Ft ∈ R^{2×C} $$, where $$ C $$ denotes the number of channels of the feature. Let $$ Fc ∈ R^{1×C} $$ represent the image features derived from the visual encoder for classification. The relative probabilities $$ s $$ of the MRI being classified as either normal or abnormal can then be expressed as:
 
 $$ s = \text{softmax}(F_c F_t^T) $$
 
@@ -46,11 +46,12 @@ We use the probability corresponding to the abnormal class as the anomaly score 
 #### Decoder
 
 The CLIP model, originally designed for classification tasks, maps only the final image features to the joint embedding space, enabling direct comparison with text features. However, intermediate image features from earlier layers, which are crucial for fine-grained localization, are not inherently aligned with the joint embedding space. To address this limitation, we introduce a decoder that maps these intermediate image features into the joint embedding space, enabling meaningful comparisons with text embeddings. Using the transformer-based architecture ViT, we empirically divide the layers into four stages—specifically, the 6th, 12th, 18th, and 24th hidden layers. For each stage, the decoder processes the corresponding output features.
+
 The decoder is composed of a linear layer followed by a Leaky ReLU activation function, which ensures smooth handling of negative values. A final linear layer completes the mapping process, producing features aligned with the joint embedding space.
 
 This architecture as shown below effectively bridges the gap between intermediate visual features and textual embeddings, facilitating accurate patch-level similarity comparisons and improving localization performance. Furthermore, We employ the linear combination of Focal loss and Dice loss to train the decoder.
 
-$$ LOSS = DICE_LOSS + FOCAL_LOSS $$
+$$ LOSS = DICE-LOSS + FOCAL-LOSS $$
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -69,6 +70,7 @@ Vision Instruct Model, a powerful multimodal LLM optimized for visual tasks The 
 ### Experiments
 
 Training was done over 3 epochs, we utilized the Adam optimizer with specific hyperparameter settings: a learning rate of 0.01 and momentum parameters of 0.5 and 0.999. These values were selected to balance stability and convergence speed, especially given the inherent variability in the training data. The batch size was set to 16, ensuring efficient training while maintaining computational feasibility.
+
 On the large language model (LLM) side, we explored various prompting paradigms to evaluate their efficacy in different scenarios. These included zero-shot prompting, where we just passed the raw image and asked for the tumor location; instruction-based prompting, where we passed the localization results of the raw images and asked for the tumor location explicitly stating that red region indicates the tumor; and chain-of-thought (CoT) prompting, which encouraged step-by-step reasoning to solve more complex problems, here again we passed the localization results and
 just asked for the tumor location and details. These prompting strategies were assessed to determine their impact on the model’s ability to interpret and generate meaningful outputs.
 
@@ -101,3 +103,7 @@ correctly identify the tumor’s location and produce accurate responses.
     LvLM Response.
 </div>
 
+### Conclusion 
+
+We introduced a novel approach that builds on anomaly detection techniques for analyzing medical images, specifically MRI scans, to detect brain tumors. Using MRI scans, which provide detailed images of the brain, we applied pretrained multimodal models like CLIP and LLaMA 3.2. Former helped us pinpoint the exact location of the tumor and latter allowed us to incorporate interactive dialogue features, increasing the interpretability of the results. This approach enhances the ability of medical professionals to understand and act on the information, as it provides both precise localization and easy-to-understand explanations through natural language communication. By merging cutting-edge AI models with medical imaging, we aim
+to streamline the tumor detection process and assist health-care providers in making better-informed decisions.
