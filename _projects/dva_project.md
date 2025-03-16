@@ -129,7 +129,7 @@ Defining the **optimal number of topics** involves a trade-off between **granula
     Comment Distribution.
 </div>
 
-For reporting purposes, having mappings called topic1, topic 2 in a dashboard does not provide an intuitive solution. A clean version was provided by creating reporting_topic describing the topic in plain English (e.g. good breakfast). This step was manual and required human interpretation of the topics.
+For reporting purposes, having mappings called topic1, topic 2 in a dashboard was not an intuitive solution. A clean version was provided by creating reporting_topic describing the topic in plain English (e.g. good breakfast). This step was manual and required human interpretation of the topics.
 
 ### Conclusion
 
