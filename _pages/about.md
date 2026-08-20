@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Antalya, Türkiye</p>
+    <p>Istanbul, Türkiye</p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -18,4 +18,4 @@ social: true # includes social icons at the bottom of the page
 
 I am originally from Pakistan, raised in the vibrant city of Gujranwala. I completed my bachelor’s degree in Economics and Mathematics with a minor in Computer Science at LUMS, where my passion for data science truly ignited. Later, while working at Afiniti, I earned a master’s degree in Analytics from Georgia Tech, further enhancing my expertise in the field.
 
-Currently, I am based in Türkiye, working as a Senior Data Scientist at Afiniti, where I have been for over 5 years. My role involves developing and optimizing machine learning models to enhance customer interactions in call center environments, reducing churn, and boosting sales for our clients. Outside of work, I enjoy playing tennis and cricket, staying active through workouts, and unwinding with Netflix. I am also passionate about community service; during my time at LUMS, I was an active member of the Community Service Society, leading initiatives to make a positive impact.
+Currently, I am based in Türkiye, working as a Data Scientist at invent.ai, where I partner directly with retail clients on demand forecasting and inventory replenishment — helping translate AI-driven recommendations into better on-shelf availability, and building Claude- and LLM-driven automation and dashboards into our client deliverables along the way. Before this, I spent over five years at Afiniti as a Senior Data Scientist, developing and optimizing machine learning models to improve customer interactions in call center environments, reducing churn and boosting sales for our clients. Outside of work, I enjoy playing tennis and cricket, staying active through workouts, and unwinding with Netflix. I am also passionate about community service; during my time at LUMS, I was an active member of the Community Service Society, leading initiatives to make a positive impact.

@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Mehlial Kazmi",
-    "label": "Senior Data Scientist",
+    "label": "Data Scientist",
     "image": "",
     "email": "mehlial.hassan99@gmail.com",
     "url": "https://Kaz545.github.io/",
@@ -16,18 +16,32 @@
   },
   "work": [
     {
+      "name": "invent.ai",
+      "position": "Data Scientist",
+      "url": "https://www.invent.ai/",
+      "startDate": "2026-01-01",
+      "endDate": "Present",
+      "highlights": [
+        "Direct client interface with three retail clients, focused on replenishment — forecasting demand and optimizing inventory at individual stores.",
+        "Built a Claude-driven automation workflow wired into Jira that eliminates manual work creating order schedules, saving 30+ hours per month.",
+        "Built a retail insights dashboard (using Claude) adopted department-wide across roughly 10 client accounts, with automated alerting layered on top; paired it with a Claude skill for natural-language, on-demand querying of the underlying results data. Contributed to a ~5% improvement in in-stock rate and ~7% reduction in lost sales for the client.",
+        "Root-caused and fixed a client-critical discrepancy between invent.ai's forecast/projection pipeline and its suggested-orders pipeline, worth millions of dollars in order value alignment.",
+        "Built an alerting system letting a client monitor vendor projections week over week against the model's final suggested orders, giving a direct, ongoing read on model performance in business terms."
+      ]
+    },
+    {
       "name": "Afiniti",
       "position": "Senior Data Scientist",
       "url": "https://www.afiniti.com/",
-      "startDate": "2020-06-01",
-      "endDate": "Present",
+      "startDate": "2020-07-01",
+      "endDate": "2026-01-01",
       "highlights": [
-        "Leveraged Bayesian statistics and Machine learning models to contribute to generating over $3M in incremental monthly revenue for our client, AT&T.", 
-        "Applied word2vec for NLP-based feature engineering creating word embeddings for a text variable. Employed K-means clustering to group similar records, resulting in a remarkable 20% improvement in model performance.", 
-        "Analyzed 2.7M historical customer transcript records to assess churn probabilities. Transformed textual data into embedding spaces using BERT and clustered these embeddings with HDBSCAN. Identified a significant number of customers in the cluster linked to service cancellations. By calculating the Euclidean distance from each customer's embedding to this cluster's centroid, derived a churn score, with shorter distances indicating a higher likelihood of churn.", 
-        "Employed caretEnsemble to develop an ML model that effectively identified prediction and feature drift across over 1.5M data points. The findings were crucial in diagnosing the root cause of a 15% decline in model performance.", 
-        "Utilized scikit-learn's Random Forest to assess feature importance using Gini and Permutation algorithms. Enhanced feature selection with SHAP, leading to a 10% improvement in production models' performance, efficacy, and accuracy.", 
-        "Led a team in developing an interactive technical dashboard for diagnosing and resolving ML model issues, such as concept drift. This tool reduced model debugging time by 5 hours per week.", 
+        "Leveraged Bayesian statistics and Machine learning models to contribute to generating over $3M in incremental monthly revenue for our client, AT&T.",
+        "Applied word2vec for NLP-based feature engineering creating word embeddings for a text variable. Employed K-means clustering to group similar records, resulting in a remarkable 20% improvement in model performance.",
+        "Analyzed 2.7M historical customer transcript records to assess churn probabilities. Transformed textual data into embedding spaces using BERT and clustered these embeddings with HDBSCAN. Identified a significant number of customers in the cluster linked to service cancellations. By calculating the Euclidean distance from each customer's embedding to this cluster's centroid, derived a churn score, with shorter distances indicating a higher likelihood of churn.",
+        "Employed caretEnsemble to develop an ML model that effectively identified prediction and feature drift across over 1.5M data points. The findings were crucial in diagnosing the root cause of a 15% decline in model performance.",
+        "Utilized scikit-learn's Random Forest to assess feature importance using Gini and Permutation algorithms. Enhanced feature selection with SHAP, leading to a 10% improvement in production models' performance, efficacy, and accuracy.",
+        "Led a team in developing an interactive technical dashboard for diagnosing and resolving ML model issues, such as concept drift. This tool reduced model debugging time by 5 hours per week.",
         "Devised agent rankings in a call-center setting using Bayesian statistics and probabilistic programming language tool - Stan. Additionally, built a Deep Learning model with TensorFlow for an alternative ranking methodology."
       ]
     }

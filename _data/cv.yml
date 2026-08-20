@@ -2,96 +2,121 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Mehlial Kazmi
+    - name: Location
+      value: Istanbul, Türkiye
+    - name: Email
+      value: mehlial.hassan99@gmail.com
     - name: Languages
-      value: English, German
+      value: English, Urdu
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: MSc, Computational Data Analytics
+      institution: Georgia Institute of Technology, Atlanta, USA
+      year: 2022 - 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - GPA 3.91
+        - title: "Coursework:"
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - Deep Learning
+            - Big Data for Healthcare
+            - Data & Visual Analytics
+            - Computational Data Analytics (ML I)
+            - High-Dimensional Data Analytics (ML II)
+            - Deterministic Optimization
+            - Data Analytics for Business
+    - title: BSc, Economics & Mathematics (minor Computer Science)
+      institution: Lahore University of Management Sciences (LUMS), Lahore, Pakistan
+      year: 2016 - 2020
       description:
-        - Description 1.
-        - Description 2.
+        - GPA 3.60
+        - title: "Coursework:"
+          contents:
+            - Applied Probability
+            - Machine Learning
+            - Econometrics
+            - Data Structures & Algorithms
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Data Scientist
+      institution: invent.ai, Istanbul, Türkiye
+      year: Jan 2026 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Direct client interface with three retail clients, focused on replenishment — forecasting demand and optimizing inventory at individual stores.
+        - Built a Claude-driven automation workflow wired into Jira that eliminates manual work creating order schedules, saving 30+ hours per month.
+        - Built a retail insights dashboard (using Claude) adopted department-wide across roughly 10 client accounts, with automated alerting layered on top; paired it with a Claude skill for natural-language, on-demand querying of the underlying results data. Contributed to a ~5% improvement in in-stock rate and ~7% reduction in lost sales for the client.
+        - Root-caused and fixed a client-critical discrepancy between invent.ai's forecast/projection pipeline and its suggested-orders pipeline, worth millions of dollars in order value alignment.
+        - Built an alerting system letting a client monitor vendor projections week over week against the model's final suggested orders, giving a direct, ongoing read on model performance in business terms.
+    - title: Senior Data Scientist
+      institution: Afiniti, Istanbul, Türkiye
+      year: Jul 2020 - Jan 2026
       description:
-        - Description 1.
-        - Description 2.
+        - Leveraged Bayesian statistics and machine learning models to contribute to generating over $3M in incremental monthly revenue for client AT&T.
+        - Built BiasGuard, a Python tool using decision trees and LightGBM to cut bias in A/B testing; hyperparameter tuning drove a 15% improvement in experimental reliability and 20% more accurate performance measurement.
+        - Analyzed 2.7M historical customer transcripts for churn probability using BERT embeddings and HDBSCAN clustering; derived a churn score from each customer's distance to the cluster linked to cancellations.
+        - Used scikit-learn Random Forest (Gini and permutation importance) with SHAP for feature selection, driving a 10% improvement in production model performance.
+        - Built an automated tool tracking and alerting on data points excluded from performance ranking models, driving 5% better insights and operational efficiency.
+        - Led a team building an interactive dashboard for diagnosing ML issues such as concept drift, cutting model debugging time by 5 hours per week.
+        - Engineered time-series features (lagged variables, moving averages) in SQL/Python for XGBoost and LightGBM, improving AUROC from 0.80 to 0.85 and driving an 8% revenue uplift.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Technical Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming & Data
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - "Languages: Python, R, SQL, JavaScript (D3), C++, Scala, Stata"
+        - "Data engineering: ETL pipelines, PySpark, Hadoop, Airflow, pandas, numpy, scipy"
+        - "Databases & warehousing: MySQL, PostgreSQL, Redshift, Databricks"
+    - title: Machine Learning & Statistics
       items:
-        - Description 1.
-        - Description 2.
+        - "ML: scikit-learn, XGBoost, LightGBM, Random Forest, AdaBoost, KNN, Naive Bayes, logistic regression, K-Means, HDBSCAN, UMAP, PCA, SMOTE, SHAP"
+        - "Deep learning: PyTorch, TensorFlow, DNNs, LSTMs, transformers"
+        - "Statistics & experimentation: A/B testing, causal inference, hypothesis testing, regression, Bayesian modeling, probabilistic programming (Stan)"
+        - "NLP & embeddings: BERT, sBERT, distilroBERTa, BERTopic, word2vec, topic modeling, semantic clustering"
+    - title: LLM & Agentic AI
+      items:
+        - Claude (agentic workflow automation, Claude Skills authoring)
+        - Google Gemini API
+        - Structured JSON-schema prompting, prompt engineering (zero-shot, instruction, chain-of-thought)
+        - LLM-driven scoring/evaluation pipelines, natural-language insight retrieval
+    - title: BI, Visualization & Cloud
+      items:
+        - "BI & dashboards: Tableau, PowerBI, RShiny, Apache Superset, Plotly, Flask, automated alerting"
+        - "Cloud & deployment: AWS (Redshift, S3, Lambda), GCP, Azure ML, Cloud Run, Docker, Render"
+        - "Tooling: Git/GitHub, Jira, direct client ownership, demand forecasting, inventory & replenishment optimization"
+
+- title: Projects
+  type: time_table
+  contents:
+    - title: Basira — GEO (Generative Engine Optimization) Audit Platform
+      year: 2026
+      description:
+        - Python and Gemini tool that audits a website's homepage for how well LLMs (ChatGPT, Gemini, Claude, Perplexity, Copilot) crawl, parse, and recommend it.
+        - BeautifulSoup crawler, pandas ETL, and a Gemini-driven analyzer scoring sites across 13 metric indices via strict JSON-schema output, plus a "100 customer query" simulator for brand-vs-competitor citation testing.
+    - title: BrainMRI-GPT
+      year: 2024
+      description:
+        - Dialogue-driven brain tumor MRI analysis using CLIP (ViT-B/14) visual and text encoders with a custom decoder for patch-level tumor localization, paired with Llama-3.2-11B Vision Instruct for interactive natural-language interpretation.
+        - Achieved pixel-level AUROC of 99.1 and accuracy of 99.02.
+    - title: Semantic-Based Recommendation Model (SRM)
+      year: 2023
+      description:
+        - Topic modeling and distilroBERTa embeddings feeding a Neural Collaborative Filtering model over 568k Amazon Fine Food Reviews, avoiding an intractable ~1.9×10¹⁰ interaction matrix.
+    - title: Hotel Reviews Dashboard
+      year: 2023
+      description:
+        - BERTopic-based topic extraction on 505k hotel reviews, delivered as an interactive Tableau dashboard with executive and hotel-comparison views.
+    - title: Detecting Social Media Toxicity (ToxicTrek)
+      year: 2022
+      description:
+        - Word2vec embeddings and ensemble classifiers (AdaBoost best performer) to detect toxic comments in ~160k labeled Wikipedia Detox comments, with SMOTE for class imbalance.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Tennis, cricket, gym, Netflix.
+    - <u>Community:</u> Active member of the LUMS Community Service Society, leading community-impact initiatives.

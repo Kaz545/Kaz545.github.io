@@ -7,3 +7,27 @@ github_repos:
   - Kaz545/ToxicTrek
   - Kaz545/SRM
   - Kaz545/SAnD-Replication
+
+# Per-repo metadata for the self-hosted repository cards (see _includes/repository/repo.liquid).
+# Jekyll/GitHub Pages can't call the GitHub API at render time, so these are hand-maintained.
+# `stars` is intentionally left out for repos where the real count hasn't been confirmed —
+# the card simply omits the star line when it's absent, rather than showing a fabricated number.
+repo_meta:
+  - repo: Kaz545/ToxicTrek
+    description: >-
+      Detects toxic comments in ~160k labeled Wikipedia Detox posts using word2vec embeddings
+      and ensemble classifiers (Logistic Regression, KNN, Naive Bayes, Random Forest, AdaBoost),
+      with SMOTE to handle class imbalance.
+    language: Jupyter Notebook
+  - repo: Kaz545/SRM
+    description: >-
+      Semantic-based recommendation system over 568k Amazon Fine Food reviews — topic modeling
+      and distilroBERTa embeddings feed a Neural Collaborative Filtering model to recommend
+      products from review semantics rather than raw interaction counts.
+    language: Jupyter Notebook
+  - repo: Kaz545/SAnD-Replication
+    description: >-
+      Replication of the "Simply Attend and Diagnose" (SAnD) architecture — masked self-attention,
+      positional encoding, and dense interpolation on MIMIC-III clinical time series, outperforming
+      LSTM and logistic regression baselines by up to 5% accuracy.
+    language: Jupyter Notebook
